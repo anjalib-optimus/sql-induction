@@ -62,3 +62,6 @@ SELECT firstName,salary,FORMAT(SYSDATETIME(), 'MM/dd/yyyy') AS [MM/DD/YYYY] FROM
 
 --use cast() to change datatype of empid column to Varchar(10)
 SELECT CAST(ID as varchar(10)) FROM employee;
+
+--Show "Yes" for employees whose salary is more than 50000 and age is less than 35 else "No"
+SELECT CASE WHEN salary>50000 AND age<35 THEN 'YES' ELSE 'NO'END FROM employee;
